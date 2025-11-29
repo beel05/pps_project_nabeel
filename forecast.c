@@ -1,5 +1,6 @@
 // forecast.c
 #include "item.h"
+ //logic
 
 // Compute moving average over the last "window" days from the first n days
 double moving_average(double *sales, int n, int window) {
@@ -29,3 +30,4 @@ double weighted_moving_average(double *sales, int n, int window) {
     }
     return weightedSum / weightTotal;
 }
+
