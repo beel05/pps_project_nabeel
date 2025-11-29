@@ -1,10 +1,11 @@
 // main.c
-#include <stdio.h>
+#include <stdio.h>   
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 #include "item.h"
 
+//start
 int main(void) {
     Item item;
     int i;
@@ -135,3 +136,4 @@ int main(void) {
     printf("\n=== End of Forecast ===\n");
     return 0;
 }
+
