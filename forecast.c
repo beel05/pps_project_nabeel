@@ -2,7 +2,7 @@
 #include "item.h"
  //logic
 
-// Compute moving average over the last "window" days from the first n days
+//Computer moving average over the last "Window" days from the first n days
 double moving_average(double *sales, int n, int window) {
     if (window <= 0 || window > n) return 0.0;
 
@@ -30,4 +30,5 @@ double weighted_moving_average(double *sales, int n, int window) {
     }
     return weightedSum / weightTotal;
 }
+
 
