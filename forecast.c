@@ -1,8 +1,17 @@
 // forecast.c
 #include "item.h"
- //logic
-
-//Computer moving average over the last "Window" days from the first n days
+ //logic 
+//========================================================================================
+//Function: moving_average                                                               *
+//Purpose: Computes the simple moving average for the last "window" days                 *
+//sales[] -> array of sales data                                                         *
+//n       -> total number of days (size of array)                                        *
+//  window -> number of days to include in the average                                   *
+//Returns :                                                                              *
+//  The average of the last 'window' number of sales values                              *
+//Notes  :                                                                               *
+//If window > n or window <= 0, function returns 0.                                      *
+//=========================================================================================
 double moving_average(double *sales, int n, int window) {
     if (window <= 0 || window > n) return 0.0;
 
@@ -30,6 +39,7 @@ for (i = n - window; i < n; i++) {
     }
     return weightedSum / weightTotal;
 }
+
 
 
 
