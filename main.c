@@ -12,7 +12,7 @@ int main(void) {
     int window;
     int currentStock;
 
-    printf("===== Inventory Forecasting Tool =====\n\n");
+    printf("\t===== Inventory Forecasting Tool =====\n\n");
 
     // Get item name
     printf("Enter item name: ");
@@ -64,7 +64,7 @@ int main(void) {
     double maForecast = moving_average(item.sales, item.days, window);
     double wmaForecast = weighted_moving_average(item.sales, item.days, window);
 
-    printf("\n=== Forecasts for next period (day %d+1) ===\n", item.days);
+    printf("\t\n=== Forecasts for next period (day %d+1) ===\n", item.days);
     printf("Simple %d-day Moving Average Forecast: %.2f\n", window, maForecast);
     printf("Weighted %d-day Moving Average Forecast: %.2f\n", window, wmaForecast);
 
@@ -84,7 +84,7 @@ int main(void) {
             double mapeMA = compute_mape(&item.sales[window], maHistForecasts, histForecastCount);
             double mapeWMA = compute_mape(&item.sales[window], wmaHistForecasts, histForecastCount);
 
-            printf("\n=== Method Comparison (MAPE over history) ===\n");
+            printf("\t\n=== Method Comparison (MAPE over history) ===\n");
             printf("MA  MAPE: %.2f%%\n", mapeMA);
             printf("WMA MAPE: %.2f%%\n", mapeWMA);
 
@@ -122,7 +122,7 @@ int main(void) {
         reorderIn = 0; // reorder immediately
     }
 
-    printf("\n===== Inventory Recommendations for item: %s =====\n", item.name);
+    printf("\t\n===== Inventory Recommendations for item: %s =====\n", item.name);
     printf("Lead Time (days): %.2f\n", item.leadTime);
     printf("Safety Stock (approx): %.2f units\n", safetyStock);
     printf("Reorder Level: %.2f units\n", reorderLevel);
@@ -134,9 +134,10 @@ int main(void) {
     // Clean up
     free(item.sales);
 
-    printf("\n=== End of Forecast ===\n");
+    printf("\n\t=== End of Forecast ===\n");
     return 0;
 }
+
 
 
 
