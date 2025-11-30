@@ -1,5 +1,5 @@
 // forecast.c
-#include "item.h"
+#include "item.h" //header file
  //logic 
 //========================================================================================
 //Function: moving_average                                                               *
@@ -39,6 +39,8 @@ for (i = n - window; i < n; i++) {
     }
     return weightedSum / weightTotal;
 }
+
+
 
 
 
