@@ -1,4 +1,4 @@
-000000000000// forecast.c
+// forecast.c
 #include "item.h"
  //logic
 
@@ -23,6 +23,7 @@ for (i = n - window; i < n; i++) {
     }
     return weightedSum / weightTotal;
 }
+
 
 
 
