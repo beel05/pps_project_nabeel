@@ -37,8 +37,9 @@ double compute_stddev(double *sales, int n) {
     }
     var /= (n - 1);      // sample variance
 
-    return sqrt(var);
+    return sqrt(var);//return system 
 }
+
 
 
 
