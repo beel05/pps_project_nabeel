@@ -15,6 +15,9 @@ int main(void) {
     printf("=== Inventory Forecasting Tool ===\n\n");
 
     // Get item name
+    printf("Enter item name: ");
+    fgets(item.name, sizeof(item.name), stdin);
+    item.name[strcspn(item.name, "\n")] = '\0'; 
     // remove newline
 
     // Number of days of historical data
@@ -134,5 +137,6 @@ int main(void) {
     printf("\n=== End of Forecast ===\n");
     return 0;
 }
+
 
 
