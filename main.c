@@ -25,19 +25,19 @@ int main(void) {
     scanf("%d", &item.days);
 
     if (item.days <= 0) {
-        printf("Number of days must be positive.\n");
+        printf("Number of days must be Positive.\n");
         return 0;
     }
 
     // Allocate memory for sales
     item.sales = (double *)malloc(item.days * sizeof(double));
     if (item.sales == NULL) {
-        printf("Memory allocation failed.\n");
+        printf("Memory Allocation Failed.\n");
         return 0;
     }
 
     // Input historical sales
-    printf("Enter sales for each day:\n");
+    printf("Enter sales for each day: \n");
     for (i = 0; i < item.days; i++) {
         printf("Day %d: ", i + 1);
         scanf("%lf", &item.sales[i]);
@@ -52,11 +52,11 @@ int main(void) {
     scanf("%d", &currentStock);
 
     // Forecast window
-    printf("Enter forecast window (n-day moving average): ");
+    printf("Enter Forecast Window (n-day moving average): ");
     scanf("%d", &window);
 
     if (window <= 0 || window > item.days) {
-        printf("Invalid window size. Using window = %d (all available data).\n", item.days);
+        printf("Invalid window size. Using window = %d (all available data). \n", item.days);
         window = item.days;
     }
 
@@ -137,6 +137,7 @@ int main(void) {
     printf("\n=== End of Forecast ===\n");
     return 0;
 }
+
 
 
 
