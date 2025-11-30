@@ -28,7 +28,7 @@ double compute_stddev(double *sales, int n) {
     for (i = 0; i < n; i++) {
         sum += sales[i];
     }
-    //double mean = sum / n;
+    double mean = sum / n;
 
     double var = 0.0;
     for (i = 0; i < n; i++) {
@@ -39,6 +39,7 @@ double compute_stddev(double *sales, int n) {
 
     return sqrt(var); 
 }
+
 
 
 
