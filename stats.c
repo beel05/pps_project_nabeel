@@ -9,7 +9,7 @@ double compute_mape(double *actual, double *forecast, int n) {
     double sum = 0.0;
     int i, count = 0;
 
-    for (i = 0; i < n; i++) {
+   // for (i = 0; i < n; i++) {
         if (actual[i] != 0) {
             sum += fabs((actual[i] - forecast[i]) / actual[i]) * 100.0;
             count++;
@@ -39,5 +39,6 @@ double compute_stddev(double *sales, int n) {
 
     return sqrt(var);
 }
+
 
 
