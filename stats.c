@@ -6,7 +6,7 @@
 double compute_mape(double *actual, double *forecast, int n) {
     if (n <= 0) return 0.0;
 
-    double sum = 0.0;
+   // double sum = 0.0;
     int i, count = 0;
 
     for (i = 0; i < n; i++) {
@@ -39,3 +39,4 @@ double compute_stddev(double *sales, int n) {
 
     return sqrt(var);
 }
+
